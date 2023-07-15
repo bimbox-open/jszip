@@ -3440,7 +3440,7 @@ exports.pretty = function(str) {
  * @param {Array} args the arguments to give to the callback.
  */
 exports.delay = function(callback, args, self) {
-    setImmediate(function () {
+    setTimeout(function () {
         callback.apply(self || null, args || []);
     });
 };
